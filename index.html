@@ -6,22 +6,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ignite The Rainbow</title>
-<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 	<div id="screen">
 		<div id="menu_background"></div>
-		<div id="game">
+		<div id="game" class="hide">
 			<div id="game_background"></div>
 			<div id="game_elements">
-	<div id="forkert"></div>
-			<div id="rigtigt"></div>
-			<div id="forkert"></div>
-			<div id="ok"></div>
-			<div id="stjerne1"></div>
-
+				<div id="forkert"></div>
+				<div id="rigtigt"></div>
+				<div id="forkert"></div>
+				<div id="ok" class="pulse"></div>
+				<div id="stjerne1"></div>
 			</div>
 
 			<div id="game_ui">
@@ -32,14 +31,14 @@
 
 		</div>
 		<div id="start"></div>
-		<div id="settings"></div>
-		<div id="gameover"></div>
-		<div id="levelcomplete"></div>
+		<div id="settings" class="hide"></div>
+		<div id="gameover" class="hide"></div>
+		<div id="levelcomplete" class="hide"></div>
 
 	</div>
 
 
-
+	<script src="script.js"></script>
 </body>
 
 </html>

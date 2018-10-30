@@ -1,8 +1,39 @@
+#screen {
+	height: 100vw;
+	width: 56.25vw;
+	position: relative;
+}
+
+/* STARTSKÆRM */
+
+#menu_background {
+	background-image: url("Startskaerm.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 56.25vw;
+	height: 100vw;
+	position: relative;
+	z-index: 2;
+}
+
+#start {
+	background-image: url("Start_Knap.svg");
+	background-size: 100%;
+	width: 35vw;
+	height: 23vw;
+	position: absolute;
+	top: 63vw;
+	left: 10.6vw;
+	z-index: 3;
+}
+
+/* SPILSKÆRM */
+
 #game_background {
 	background-image: url("Spilskaerm.svg");
 	background-repeat: no-repeat;
-	background-size: 50%;
-	width: 75vw;
+	background-size: 100%;
+	width: 56.25vw;
 	height: 100vw;
 	position: relative;
 	z-index: 2;
@@ -12,10 +43,10 @@
 	background-image: url("Forkert_svar.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 10vw;
-	height: 10vw;
-	top: 50vw;
-	left: 20vw;
+	width: 14vw;
+	height: 14vw;
+	top: 75vw;
+	left: 28vw;
 	position: absolute;
 	z-index: 2;
 }
@@ -24,10 +55,10 @@
 	background-image: url("Rigtigt_svar.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 10vw;
-	height: 10vw;
-	top: 50.3vw;
-	left: 9vw;
+	width: 14vw;
+	height: 14vw;
+	top: 75.5vw;
+	left: 13vw;
 	position: absolute;
 	z-index: 2;
 }
@@ -35,11 +66,11 @@
 #ok {
 	background-image: url("OK_regnbue.svg");
 	background-size: 100%;
-	width: 35vw;
-	height: 23vw;
+	width: 50vw;
+	height: 32.7vw;
 	position: absolute;
-	top: 13vw;
-	left: 2vw;
+	top: 17vw;
+	left: 3vw;
 	z-index: 3;
 }
 
@@ -47,11 +78,11 @@
 	background-image: url("Stjerne1.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 20vw;
-	height: 20vw;
+	width: 35vw;
+	height: 35vw;
 	position: absolute;
-	top: 30vw;
-	left: 10vw;
+	top: 40vw;
+	left: 10.6vw;
 	z-index: 3;
 }
 
@@ -60,11 +91,11 @@
 #points {
 	background-image: url("Point.svg");
 	background-repeat: no-repeat;
-	background-size: 40%;
-	width: 15vw;
-	height: 5vw;
-	top: 6.3vw;
-	left: 32vw;
+	background-size: 100%;
+	width: 10vw;
+	height: 5.2vw;
+	top: 8.5vw;
+	left: 46vw;
 	position: absolute;
 	z-index: 2;
 }
@@ -73,10 +104,10 @@
 	background-image: url("energi.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 15vw;
-	height: 10vw;
-	top: 5.5vw;
-	left: 10.5vw;
+	width: 20vw;
+	height: 7vw;
+	top: 7.6vw;
+	left: 16.5vw;
 	position: absolute;
 	z-index: 2;
 }
@@ -85,10 +116,10 @@
 	background-image: url("Tid.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 9vw;
-	height: 10vw;
-	top: 0.5vw;
-	left: 15vw;
+	width: 14vw;
+	height: 15vw;
+	top: 0vw;
+	left: 21vw;
 	position: absolute;
 	z-index: 2;
 }
@@ -97,35 +128,14 @@
 	background-image: url("Indstillinger.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 4vw;
-	height: 4vw;
-	top: 6.1vw;
-	left: 6vw;
+	width: 6vw;
+	height: 6vw;
+	top: 8.3vw;
+	left: 8vw;
 	position: absolute;
 	z-index: 2;
 }
 
-#menu_background {
-	background-image: url("Startskaerm.svg");
-	display: none;
-	background-repeat: no-repeat;
-	background-size: 50%;
-	width: 1080px;
-	height: 1920px;
-	position: absolute;
-}
-
-#start {
-	background-image: url("Start_Knap.svg");
-	display: none;
-	background-size: 100%;
-	width: 35vw;
-	height: 23vw;
-	position: absolute;
-	top: 13vw;
-	left: 2vw;
-	z-index: 3;
-}
 
 #gameover {
 	background-image: url("Game_Over.svg");
@@ -149,4 +159,54 @@
 	top: 13vw;
 	left: 2vw;
 	z-index: 3;
+}
+
+
+/* EFFEKTER */
+.hide {
+	display: none;
+}
+
+.show {
+	visibility: visible;
+}
+
+.blur {
+	filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+	animation-name: fadeout_kf;
+	animation-duration: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.pulse {
+	animation-name: pulse_kf;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+	0% {
+		transform: scale(0.96);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
